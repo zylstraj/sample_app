@@ -1,0 +1,16 @@
+<div class="div_addpost">
+<h1>Edit Post</h1>
+<%= form_for :post, url: post_path(@post), method: :patch do |f| %>
+<p>
+  <%= f.label :title %><br>
+  <%= f.text_field :title, {:class => 'form_title'} %>
+</p>
+<p>
+  <%= f.label :body %><br>
+  <%= f.text_area :body, {:class => 'textarea_body'} %>
+</p>
+<p>
+  <%= f.submit({ :class => 'button_design'}) %>
+</p>
+<% end %>
+</div>
